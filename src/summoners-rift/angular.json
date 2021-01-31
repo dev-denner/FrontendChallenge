@@ -3,11 +3,11 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "SummonersRift": {
+    "summoners-rift": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
-          "style": "sass"
+          "style": "scss"
         }
       },
       "root": "",
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/SummonersRift",
+            "outputPath": "dist/summoners-rift",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -28,8 +28,7 @@
               "src/assets"
             ],
             "styles": [
-              "./node_modules/@angular/material/prebuilt-themes/purple-green.css",
-              "src/styles.sass"
+              "src/styles.scss"
             ],
             "scripts": []
           },
@@ -66,18 +65,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "SummonersRift:build"
+            "browserTarget": "summoners-rift:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "SummonersRift:build:production"
+              "browserTarget": "summoners-rift:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "SummonersRift:build"
+            "browserTarget": "summoners-rift:build"
           }
         },
         "test": {
@@ -92,8 +91,7 @@
               "src/assets"
             ],
             "styles": [
-              "./node_modules/@angular/material/prebuilt-themes/purple-green.css",
-              "src/styles.sass"
+              "src/styles.scss"
             ],
             "scripts": []
           }
@@ -115,16 +113,16 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "SummonersRift:serve"
+            "devServerTarget": "summoners-rift:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "SummonersRift:serve:production"
+              "devServerTarget": "summoners-rift:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "SummonersRift"
+  "defaultProject": "summoners-rift"
 }
