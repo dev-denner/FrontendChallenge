@@ -1,0 +1,13 @@
+<div class="text-light mt-5">
+  <h3>Tournament Settings</h3>
+  <p class="lead mt-5">
+    The tournament requires 8 challengers to start. Register the names of the participants to continue.
+  </p>
+  <div class="row">
+    <div class="col-sm-6" *ngFor="let challenger of challengers">
+      <app-input-challenger [challenger]="challenger"></app-input-challenger>
+    </div>
+  </div>
+  <div class="alert alert-danger" role="alert" *ngIf="!valid" >Fill in all the names of the challengers</div>
+  <button type="button" class="btn btn-outline-light btn-lg mt-5" (click)="startTournament()">Start</button>
+</div>

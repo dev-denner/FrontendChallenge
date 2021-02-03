@@ -1,0 +1,6 @@
+<div class="mb-3">
+  <label [for]="'challenger' + challenger.id" class="form-label">Challenger {{ challenger.id }}</label>
+  <input type="text" class="form-control" [value]="challenger.name" [id]="'challenger' + challenger.id"
+    (blur)="setName(challenger, $event); validate($event)" required>
+  <span class="text-danger" role="alert" *ngIf="!valid">Do not leave this field blank!</span>
+</div>
