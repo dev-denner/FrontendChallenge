@@ -1,13 +1,16 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
 import { HomeComponent } from './pages/home/home.component';
 import { TournamentSettingsComponent } from './pages/tournament-settings/tournament-settings.component';
-import { ChallengersService } from './services/challengers/challengers.service';
+
 import { InputChallengerComponent } from './components/input-challenger/input-challenger.component';
+
+import { ChallengersService } from './services/challengers/challengers.service';
+import { TournamentService } from './services/tournament/tournament.service';
 
 @NgModule({
   declarations: [
@@ -23,6 +26,7 @@ import { InputChallengerComponent } from './components/input-challenger/input-ch
   ],
   providers: [
     ChallengersService,
+    TournamentService,
   ],
   bootstrap: [AppComponent]
 })
