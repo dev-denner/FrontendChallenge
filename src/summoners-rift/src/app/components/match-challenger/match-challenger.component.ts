@@ -23,9 +23,7 @@ export class MatchChallengerComponent implements OnInit {
 
   winner(event: any, challenger: any): void {
     this.cbMatchChallenger.emit([challenger]);
-    const button = event.target.parentElement.parentElement.querySelectorAll(
-      'app-match-challenger',
-    );
+    const button = event.target.parentElement.parentElement.querySelectorAll('app-match-challenger');
     button.forEach(bt => bt.querySelector('button').disabled = true);
   }
 

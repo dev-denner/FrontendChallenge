@@ -11,15 +11,16 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { HomeComponent } from './pages/home/home.component';
 import { TournamentSettingsComponent } from './pages/tournament-settings/tournament-settings.component';
 import { TournamentComponent } from './pages/tournament/tournament.component';
+import { WinnerComponent } from './pages/winner/winner.component';
 
 // components
 import { InputChallengerComponent } from './components/input-challenger/input-challenger.component';
+import { MatchChallengerComponent } from './components/match-challenger/match-challenger.component';
 
 // services
 import { ChallengersService } from './services/challengers/challengers.service';
 import { TournamentService } from './services/tournament/tournament.service';
-import { MatchChallengerComponent } from './components/match-challenger/match-challenger.component';
-import { WinnerComponent } from './pages/winner/winner.component';
+import { WinnerService } from './services/winner/winner.service';
 
 @NgModule({
   declarations: [
@@ -40,6 +41,7 @@ import { WinnerComponent } from './pages/winner/winner.component';
   providers: [
     ChallengersService,
     TournamentService,
+    WinnerService
   ],
   bootstrap: [AppComponent]
 })

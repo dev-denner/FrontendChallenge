@@ -23,6 +23,7 @@ export class TournamentSettingsComponent implements OnInit {
   ngOnInit(): void {
     this.challengers = this.challengersService.getChallengers();
   }
+
   startTournament(): void {
     if (this.validate()) {
       this.challengersService.updateChallengers(this.challengers);
