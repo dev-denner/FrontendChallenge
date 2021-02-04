@@ -1,14 +1,16 @@
 Perfil do Invocador
 ========================
 
-**Nome completo:**   
-**Data de nascimento:**   
-**Endereço no LinkedIn:**   
+**Nome completo:** Denner Fernandes da Silva
 
-**Qual sua IDE favorita e por que:**   
+**Data de nascimento:** 07/10/1981
 
-**GULP, GRUNT?**
+**Endereço no LinkedIn:** https://www.linkedin.com/in/dennersfernandes/
 
-**Bower morreu?** 
+**Qual sua IDE favorita e por que:** vscode, pelos plugins e as constantes melhorias que ele possue
 
-**Como nos conheceu:**   
+**GULP, GRUNT?** Prefiro webpack
+
+**Bower morreu?** npm e yarn são melhores
+
+**Como nos conheceu:** A Joseli me contactou pelo LinkedIn
