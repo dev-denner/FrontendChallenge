@@ -10,4 +10,9 @@ export class TournamentService {
   setStatusTournament(status: boolean): void {
     localStorage.setItem('tournament', JSON.stringify(status));
   }
+
+  getStatusTournament(): boolean {
+    return JSON.parse(localStorage.getItem('tournament'));
+  }
+
 }

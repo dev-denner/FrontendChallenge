@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { ChallengersService } from './../../services/challengers/challengers.service';
+import { TournamentService } from '../../services/tournament/tournament.service'
 import { IChallengers } from './../../services/challengers/IChallengers';
 
 @Component({
@@ -12,7 +14,11 @@ export class TournamentSettingsComponent implements OnInit {
   public challengers: IChallengers[];
   public valid = true;
 
-  constructor(private challengersService: ChallengersService) { }
+  constructor(
+    private challengersService: ChallengersService,
+    private tournamentService: TournamentService,
+    private router: Router,
+  ) { }
 
   ngOnInit(): void {
     this.challengers = this.challengersService.getChallengers();
@@ -20,6 +26,8 @@ export class TournamentSettingsComponent implements OnInit {
   startTournament(): void {
     if (this.validate()) {
       this.challengersService.updateChallengers(this.challengers);
+      this.tournamentService.setStatusTournament(true);
+      this.router.navigateByUrl('/tournament');
     }
   }
 
