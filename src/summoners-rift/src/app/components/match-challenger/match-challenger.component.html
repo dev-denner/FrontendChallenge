@@ -1,0 +1,6 @@
+<button class="match-container clearfix" (click)="winner($event, challenger)" [disabled]="!challenger?.id">
+  <span class="name">{{ !challenger ? 'waiting ...' : challenger.name }}</span>
+  <span class="icon">
+    <fa-icon [icon]="iconCaretRight"></fa-icon>
+  </span>
+</button>

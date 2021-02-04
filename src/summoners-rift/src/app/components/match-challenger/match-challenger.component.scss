@@ -1,0 +1,30 @@
+.match-container {
+  width: 100%;
+  border: none;
+  text-align: left;
+  padding-left: 15px;
+  background: linear-gradient(79deg, rgb(59, 54, 54) -60%, rgb(66, 65, 95) 100%);
+  color: #ffffff;
+  margin-bottom: 2px;
+  transition: all 250ms ease-in-out;
+
+  &:hover {
+    filter: brightness(150%);
+  }
+
+  &[disabled] {
+    filter: brightness(50%);
+  }
+
+  .name {
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    vertical-align: middle;
+  }
+
+  .icon {
+    float: right;
+    font-size: 1.5rem;
+    padding: 0 5px 0 15px;
+  }
+}
