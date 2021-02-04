@@ -3,6 +3,7 @@ import { Router } from '@angular/router'
 import { ChallengersService } from './../../services/challengers/challengers.service';
 import { TournamentService } from './../../services/tournament/tournament.service';
 import { IChallengers } from './../../services/challengers/IChallengers';
+import { WinnerService } from './../../services/winner/winner.service';
 
 
 @Component({
@@ -19,6 +20,7 @@ export class TournamentComponent implements OnInit {
     private tournamentService: TournamentService,
     private challengersService: ChallengersService,
     private router: Router,
+    private winnerService: WinnerService,
   ) { }
 
   ngOnInit(): void {
@@ -69,12 +71,12 @@ export class TournamentComponent implements OnInit {
     };
   }
 
-  roundChampion(challenger: any, match: string, position: number): void {
+  roundChampion(challenger: any, match: string, position: number): Promise<boolean> {
     if (match === 'win') {
-      return;
+      this.winnerService.setWinner(challenger);
+      return this.router.navigateByUrl('/winner');
     }
     this.matches[match][position] = challenger;
-    console.log('this.matches[match]', this.matches[match])
   }
 
 }
