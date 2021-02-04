@@ -1,0 +1,42 @@
+<div class="row text-light">
+  <div class="col-sm">
+    <div class="phase">
+      <div class="matches">
+        <app-match-challenger (cbMatchChallenger)="roundChampion(matches.one[0], 'five', 0)" [challenger]="matches.one[0]"></app-match-challenger>
+        <app-match-challenger (cbMatchChallenger)="roundChampion(matches.one[1], 'five', 0)" [challenger]="matches.one[1]"></app-match-challenger>
+      </div>
+      <div class="matches">
+        <app-match-challenger (cbMatchChallenger)="roundChampion(matches.two[0], 'five', 1)" [challenger]="matches.two[0]"></app-match-challenger>
+        <app-match-challenger (cbMatchChallenger)="roundChampion(matches.two[1], 'five', 1)" [challenger]="matches.two[1]"></app-match-challenger>
+      </div>
+      <div class="matches">
+        <app-match-challenger (cbMatchChallenger)="roundChampion(matches.three[0], 'six', 0)" [challenger]="matches.three[0]"></app-match-challenger>
+        <app-match-challenger (cbMatchChallenger)="roundChampion(matches.three[1], 'six', 0)" [challenger]="matches.three[1]"></app-match-challenger>
+      </div>
+      <div class="matches">
+        <app-match-challenger (cbMatchChallenger)="roundChampion(matches.four[0], 'six', 1)" [challenger]="matches.four[0]"></app-match-challenger>
+        <app-match-challenger (cbMatchChallenger)="roundChampion(matches.four[1], 'six', 1)" [challenger]="matches.four[1]"></app-match-challenger>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm">
+    <div class="phase">
+      <div class="matches">
+        <app-match-challenger (cbMatchChallenger)="roundChampion(matches.five[0], 'seven', 0)" [challenger]="matches.five[0]"></app-match-challenger>
+        <app-match-challenger (cbMatchChallenger)="roundChampion(matches.five[1], 'seven', 0)" [challenger]="matches.five[1]"></app-match-challenger>
+      </div>
+      <div class="matches">
+        <app-match-challenger (cbMatchChallenger)="roundChampion(matches.six[0], 'seven', 1)" [challenger]="matches.six[0]"></app-match-challenger>
+        <app-match-challenger (cbMatchChallenger)="roundChampion(matches.six[1], 'seven', 1)" [challenger]="matches.six[1]"></app-match-challenger>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm">
+    <div class="phase">
+      <div class="matches">
+        <app-match-challenger (cbMatchChallenger)="roundChampion(matches.seven[0], 'win', -1)" [challenger]="matches.seven[0]"></app-match-challenger>
+        <app-match-challenger (cbMatchChallenger)="roundChampion(matches.seven[1], 'win', -1)" [challenger]="matches.seven[1]"></app-match-challenger>
+      </div>
+    </div>
+  </div>
+</div>
