@@ -19,6 +19,7 @@ import { InputChallengerComponent } from './components/input-challenger/input-ch
 import { ChallengersService } from './services/challengers/challengers.service';
 import { TournamentService } from './services/tournament/tournament.service';
 import { MatchChallengerComponent } from './components/match-challenger/match-challenger.component';
+import { WinnerComponent } from './pages/winner/winner.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { MatchChallengerComponent } from './components/match-challenger/match-ch
     TournamentComponent,
     InputChallengerComponent,
     MatchChallengerComponent,
+    WinnerComponent,
   ],
   imports: [
     BrowserModule,
